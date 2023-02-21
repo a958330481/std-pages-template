@@ -4,11 +4,6 @@ export const success = 200;
 // 未登录
 export const unLogin = [40106, 40004];
 
-/**
- * 文档地址
- * https://edu-doc.test.seewo.com/documents/%E8%AF%BE%E4%BB%B6%E7%9B%B8%E5%85%B3/%E8%AF%BE%E4%BB%B6%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html#%E9%94%99%E8%AF%AF%E7%A0%81
- *
- */
 
 export const EN_CODE = {
   0: 'ok',

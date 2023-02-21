@@ -3,20 +3,6 @@ const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-const proxyTarget = {
-  development: {
-    server: 'https://dws-dev.test.seewo.com',
-  },
-  test: {
-    server: 'https://dws.test.seewo.com',
-  },
-  production: {
-    server: 'https://dws.seewo.com',
-  },
-};
-
-const { server } = proxyTarget[process.env.BASE_ENV];
-
 // 合并公共配置,并添加开发环境配置
 module.exports = merge(baseConfig, {
   mode: 'development', // 开发模式,打包更加快速,省了代码优化步骤
@@ -31,13 +17,6 @@ module.exports = merge(baseConfig, {
     static: {
       directory: path.join(__dirname, '../public'), //托管静态资源public文件夹
     },
-    proxy: [
-      {
-        context: ['/api', '/dws', '/editor', '/enow'],
-        target: server,
-        changeOrigin: true,
-      },
-    ],
   },
   plugins: [
     new ReactRefreshWebpackPlugin(), // 添加热更新插件
