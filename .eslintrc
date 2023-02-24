@@ -3,18 +3,18 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     },
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint","react-hooks"],
+  "plugins": ["@typescript-eslint", "react-hooks"],
   "extends": [
-    "eslint:recommended", 
-    "plugin:react/recommended", 
+    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "env":{
+  "env": {
     "node": true,
     "browser": true,
     "es2021": true
@@ -25,10 +25,15 @@
     "@typescript-eslint/no-var-requires": 0,
     "max-lines": ["warn", 400],
     "complexity": ["warn", 20],
-     // 检查 Hooks 的使用规则
+    // 检查 Hooks 的使用规则
     "react-hooks/rules-of-hooks": "error",
     // 检查依赖项的声明
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

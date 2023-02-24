@@ -1,6 +1,6 @@
 # std-pages-template  
 
-基于webpack5+antd+mobx+react+ts 的多页面脚手架
+基于webpack5+antd+mobx+react+ts+git-flow 的多页面脚手架
 
 ## 目录结构
 

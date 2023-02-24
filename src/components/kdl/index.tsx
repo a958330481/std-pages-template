@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import { autorun, toJS } from 'mobx';
 import { globalStore } from '@/store/global';
-import LogoPng from '@/assets/images/logo.png';
+import DemoGif from '@/assets/images/demo.gif';
 import { Button } from 'antd';
 import './index.less';
 
@@ -20,8 +20,8 @@ function KdlComponent() {
 
   return (
     <div className='kdl-info'>
-      <img src={LogoPng} />
-      <h2>kdl-pages-template</h2>
+      <img src={DemoGif} />
+      <h2>基于webpack5+antd+mobx+react+ts+git-flow 的多页面脚手架</h2>
       <div className='btn-container'>
         <Button
           onClick={() => {
